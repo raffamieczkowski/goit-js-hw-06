@@ -7,4 +7,4 @@ const categoryName = category.querySelector('h2').textContent;
         const numOfElements = elements.length;
 console.log(`Category: ${categoryName}`);
 console.log(`Elements: ${numOfElements}`);
-}); 
+});

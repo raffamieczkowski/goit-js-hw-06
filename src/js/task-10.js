@@ -10,25 +10,24 @@ const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
 const boxes = document.querySelector('#boxes');
 
-// funkcja tworząca kolekcję elementów
 function createBoxes(amount) {
-  let size = 30; // początkowy rozmiar elementu
+  let size = 30;
   for (let i = 0; i < amount; i++) {
     const div = document.createElement('div');
     div.style.width = `${size}px`;
     div.style.height = `${size}px`;
     div.style.backgroundColor = getRandomHexColor();
     boxes.appendChild(div);
-    size += 10; // zwiększamy rozmiar elementu o 10px
+    size += 10;
   }
 }
 
-// funkcja usuwająca kolekcję elementów
+
 function destroyBoxes() {
-  boxes.innerHTML = ''; // usuwamy zawartość div#boxes
+  boxes.innerHTML = '';
 }
 
-// obsługa przycisków
+
 createBtn.addEventListener('click', () => {
   const amount = input.value;
   createBoxes(amount);
